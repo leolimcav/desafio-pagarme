@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  api:
+    container_name: desafio-api
+    image: node:12.20.1-buster-slim
+    working_dir: /opt/app
+    restart: always
+    command: ["yarn", "dev"]
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/opt/app
+    depends_on:
+      - db
+  db:
+    container_name: desafio-db
+    image: postgres:12-alpine
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=docker
