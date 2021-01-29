@@ -1,15 +1,7 @@
-import "reflect-metadata";
+import App from "./app/app";
 
-import express from "express";
+const server = App;
 
-import "./config/database";
-
-const server = express();
-
-server.use("/", (req, res) => {
-  return res.json({ status: "Running" });
-});
-
-server.listen(3000, () => {
+server.listen(process.env.PORT || 3000, () => {
   console.log("Running on 3000");
 });
