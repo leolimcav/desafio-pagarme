@@ -1,19 +1,40 @@
-{
-  "type": "postgres",
-  "host": "localhost",
-  "port": 5432,
-  "username": "postgres",
-  "password": "docker",
-  "database": "desafio",
-  "logging": true,
-  "entities": [
-    "src/app/models/*.ts"
-  ],
-  "migrations": [
-    "src/config/database/migrations/*.ts"
-  ],
-  "cli": {
-    "migrationsDir": "src/config/database/migrations"
+[
+  {
+    "name": "default",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "docker",
+    "database": "desafio",
+    "migrationsRun": true,
+    "entities": [
+      "./src/app/models/*.ts"
+    ],
+    "migrations": [
+      "./src/config/database/migrations/*.ts"
+    ],
+    "cli": {
+      "migrationsDir": "./src/config/database/migrations"
+    }
   },
-  "synchronize": false
-}
+  {
+    "name": "tests-connection",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "docker",
+    "database": "desafio_tests",
+    "migrationsRun": true,
+    "entities": [
+      "./src/app/models/*.ts"
+    ],
+    "migrations": [
+      "./src/config/database/migrations/*.ts"
+    ],
+    "cli": {
+      "migrationsDir": "./src/config/database/migrations"
+    }
+  }
+]

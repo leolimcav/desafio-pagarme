@@ -43,7 +43,7 @@ export default class AddTransactions1610235520404
           },
           {
             name: "expiration_date",
-            type: "date",
+            type: "string",
             isNullable: false,
           },
           {

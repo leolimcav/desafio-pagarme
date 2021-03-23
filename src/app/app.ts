@@ -1,8 +1,4 @@
-import "reflect-metadata";
-import "../config/database";
-
 import express from "express";
-
 import routes from "./routes";
 
 class App {

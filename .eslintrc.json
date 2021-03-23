@@ -36,7 +36,8 @@
       }
     ],
     "@typescript-eslint/no-explicit-any": "off",
-    "camelcase": "off"
+    "camelcase": "off",
+    "no-nested-ternary": "off"
   },
   "settings": {
     "import/resolver": {

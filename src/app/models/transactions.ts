@@ -7,7 +7,7 @@ import {
 } from "typeorm";
 
 @Entity("transactions")
-class Transactions {
+class Transaction {
   @PrimaryGeneratedColumn("increment")
   id: number;
 
@@ -27,7 +27,7 @@ class Transactions {
   owner_name: string;
 
   @Column()
-  expiration_date: Date;
+  expiration_date: string;
 
   @Column()
   cvv: string;
@@ -39,4 +39,4 @@ class Transactions {
   updated_at: Date;
 }
 
-export default Transactions;
+export default Transaction;
